@@ -1,14 +1,12 @@
 import React from 'react'
 
-const ItemCount = () => {
-    let itemUnits = 0;
-
-
+const ItemCount = ({itemUnits, onAdd}) => {
+  
     return (
         <div>
             <p>{itemUnits} items</p>
-            <button>sumar 1 item</button>
-            <button>restar 1 item</button>
+            <button onClick={()=>onAdd('+')}>sumar 1 item</button>
+            <button onClick={()=>onAdd('-')}>restar 1 item</button>
         </div>
     )
 }
