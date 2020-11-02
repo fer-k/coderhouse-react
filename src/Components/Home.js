@@ -8,7 +8,7 @@ const Home = ({greeting}) => {
         <div>
             <h1>{greeting}</h1>
             <SubHeading />
-            <CountContainer />
+            <CountContainer min='0' max='10'/>
         </div>
     );
 }
