@@ -9,7 +9,8 @@ export default function ItemCountContainer ({min, max}) {
     // metodo para sumar y restar
     const onAdd = (sign) => {
         if ((sign === '+') && (itemUnits < max)) setItemUnits(itemUnits + 1);
-        if ((sign === '-') && (itemUnits > min)) setItemUnits(itemUnits - 1);
+        if ((sign === '-') && (itemUnits > min
+            )) setItemUnits(itemUnits - 1);
     }
 
     return (
