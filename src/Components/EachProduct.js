@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react';
+import ItemDetailContainer from '../Containers/ItemDetailContainer';
 import ProductsContainer from '../Containers/ProductsContainer';
 
 const getPromise = (data) => {
@@ -23,6 +24,7 @@ const EachProduct = ({ProductList}) => {
                 <h3>{item.title}</h3>
                 <p>{item.description}</p>
                 <p>${item.price}</p>
+                <ItemDetailContainer/>
             </div>
         }
     ))
