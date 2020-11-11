@@ -1,9 +1,13 @@
 import React from 'react';
 
-const ItemDetail = (props) => {
+const ItemDetail = () => {
 
     return (
-        <div></div>
+        <div>
+            <h3>Nombre del producto</h3>
+            <p>Descripción del producto.</p>
+            <p>Precio: $123.00.-</p>
+        </div>
     )
 }
 
