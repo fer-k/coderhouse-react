@@ -26,7 +26,7 @@ const EachProduct = ({ProductList}) => {
                 <h3>{item.title}</h3>
                 {/* <p>{item.description}</p> */}
                 <p>${item.price}</p>
-                <Link to ="/:id"><button>Detalles del Producto</button></Link>
+            <Link to=`/${item.id}`><button>Detalles del Producto</button></Link>
                 {/* <ItemDetailContainer/> */}
             </div>
 
