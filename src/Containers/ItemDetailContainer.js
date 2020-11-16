@@ -20,7 +20,7 @@ const ItemDetailContainer = () => {
         getPromise( ProductList ).then(result => setSourceData(result));
     }, [])
 
-    const product = SourceData.filter(item => item.id === id)
+    const product = SourceData.filter((item) => item.id == id)
 console.log(product)
     return (
         <div>
