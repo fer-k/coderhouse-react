@@ -6,13 +6,13 @@ import CartContext from './Context/CartContext'
 
 function App() {
   return (
-    <CartContext.Consumer>
+    <CartContext.Provider value={[]}>
     <BrowserRouter>
       <div className="App">
         <NavBar />
       </div>
       </BrowserRouter>
-      </CartContext.Consumer>
+      </CartContext.Provider>
   );
 }
 
