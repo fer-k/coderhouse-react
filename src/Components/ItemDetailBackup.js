@@ -12,7 +12,7 @@ const ItemDetail = ({ product },) => {
                 <p>{prod.description}</p>
                 <p>Precio: ${prod.price}</p>
                 <CountContainer min='0' max='10'/>
-
+                <button>Comprar </button>
             </div>
             
             

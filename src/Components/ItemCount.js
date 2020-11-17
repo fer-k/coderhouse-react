@@ -6,7 +6,8 @@ const ItemCount = ({itemUnits, onAdd}) => {
         <div>
             <p>{itemUnits} items</p>
             <button onClick={()=>onAdd('+')}>sumar 1 item</button>
-            <button onClick={()=>onAdd('-')}>restar 1 item</button>
+            <button onClick={()=>onAdd('-')}>restar 1 item</button><br/>
+            <button>Comprar {itemUnits}</button>
         </div>
     )
 }
