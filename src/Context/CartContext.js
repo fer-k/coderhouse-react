@@ -8,11 +8,15 @@ const CartContextProvider = ({children}) => {
 
     const [cartList, setCartList] = useState([]);
 
+    const addProduct = (product) => {
+        setCartList([...cartList, product])
+    }
+
     return (
         <CartContext.Provider
             value={{
                 cartList,
-                setCartList
+                addProduct
             }}
         >
             {children}

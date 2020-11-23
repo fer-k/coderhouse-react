@@ -3,16 +3,10 @@ import ItemCounter from './ItemCounter';
 import {useCartContext} from '../Context/CartContext'
 
 
-const ItemDetail = ({ product },) => {
+const ItemDetail = ({ products },) => {
 
-    const CartContent = useCartContext(cartList, setCartList);
+   const {addProduct} = useCartContext();
     
-    console.log(CartContent);
-
-    const addProduct = () => {
-        setCartList([...cartList, product])
-    }
-
     const [counter, setCounter] = useState(1);
 
     function AddClick() {
@@ -29,15 +23,15 @@ const numMax = 10;
     };
 
     return (
-        product.map((prod, i) => {
+        products.map((prod, i) => {
             
-            return<div>
+            return<div key={prod.id}>
                 <h3>{prod.title}</h3>
                 <p>{prod.description}</p>
                 <p>Precio: ${prod.price}</p>
                 <ItemCounter counter={counter} setCounter={setCounter} AddClick={AddClick} RemoveClick={RemoveClick} numMax="10" numMin="0"/>
                 <p>Cantidad {counter}</p>
-                <button onClick={addProduct}>Comprar</button>
+                <button onClick={() => addProduct(prod)}>Agregar al carrito</button>
             </div>
             
             
