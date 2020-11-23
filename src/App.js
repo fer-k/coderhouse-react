@@ -2,17 +2,17 @@ import React from 'react';
 import './App.css';
 import NavBar from './Components/NavBar';
 import { BrowserRouter } from 'react-router-dom';
-import CartContext from './Context/CartContext'
+import CartContextProvider from './Context/CartContext'
 
 function App() {
   return (
-    <CartContext.Provider value={[]}>
+    <CartContextProvider>
     <BrowserRouter>
       <div className="App">
         <NavBar />
       </div>
       </BrowserRouter>
-      </CartContext.Provider>
+      </CartContextProvider>
   );
 }
 

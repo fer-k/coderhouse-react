@@ -6,19 +6,22 @@ import Home from '../Containers/Home';
 import About from '../Containers/About';
 import Contact from '../Containers/Contact';
 import ItemDetailContainer from '../Containers/ItemDetailContainer';
+import CartContainer from '../Containers/CartContainer';
 
 const NavBar = () => {
     return (
         <div>
             <ul>
-                <li><NavLink to="/"><CartIcon/>Cart</NavLink></li>
-                <li><NavLink to="/about">About</NavLink></li>
-                <li><NavLink to="/contact">Contact</NavLink></li>
+                <li><NavLink to="/">Productos</NavLink></li>
+                <li><NavLink to="/about">Sobre Nosotros</NavLink></li>
+                <li><NavLink to="/contact">Contacto</NavLink></li>
+                <li><NavLink to="/cart"><CartIcon/> Carrito</NavLink></li>
             </ul>
             <Switch>
                 <Route exact path="/" component={Home}/>
                 <Route path="/about" component={About}/>
-                <Route path="/contact" path="/contact" component={Contact}/>
+                <Route path="/contact" component={Contact}/>
+                <Route path="/cart" component={CartContainer}/>
                 <Route exact path="/:id" component={ItemDetailContainer}/>
             </Switch>
         </div> 
