@@ -6,8 +6,8 @@ import {useParams} from 'react-router-dom';
 const getPromise = (data) => {
     return new Promise((res, rej) => {
         setTimeout(() => {
-            return res(data)
-        }, 1000)
+        return res(data)
+        }, 10)
     })
 }
 
@@ -21,6 +21,7 @@ const ItemDetailContainer = () => {
     }, [])
 
     const products = SourceData.filter((item) => item.id === Number(id))
+    
     return (
         <div>
             <ItemDetail products={ products }/>
