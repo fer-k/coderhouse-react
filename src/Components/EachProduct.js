@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import { Link } from 'react-router-dom';
+import {useCartContext} from '../Context/CartContext'
 
 const getPromise = (data) => {
     return new Promise((res, rej) => {
@@ -10,6 +11,8 @@ const getPromise = (data) => {
 }
 
 const EachProduct = ({ProductList}) => {
+
+    const {addProduct} = useCartContext();
     
     const [SourceData, setSourceData] = useState([]);
     
@@ -24,6 +27,7 @@ const EachProduct = ({ProductList}) => {
             <h3>{item.title}</h3>
             <p>${item.price}</p>
             <Link to={`/${item.id}`}><button>Detalles del Producto</button></Link>
+            <button onClick={() => addProduct(item)}>Agregar al carrito</button>
             </div>
             
             
