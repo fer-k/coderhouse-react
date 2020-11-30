@@ -11,9 +11,9 @@ const getPromise = (data) => {
 
 const ProductsContainer = () => {
 
-    const [SourceProducts, setProducts] = useState([]);
     const DB = GetDB();
     const allProducts = DB.collection("item colection");
+    const [SourceProducts, setProducts] = useState([]);
     
 
     useEffect(() => {
@@ -26,18 +26,14 @@ const ProductsContainer = () => {
                         console.log("no traje nada");
                     }
         
-                    result.docs.map((doc) => {
-                        const news = [doc.data(), ...SourceProducts]
-                        setProducts(news);
-                        
-                    });
+                    result.docs.map((doc) => setProducts(doc.data()));
                 })
                 .catch((error) => console.log(error))
                 .finally(() => {})
             })        
         })
         
-        console.log(SourceProducts)
+        console.log(SourceProducts.length)
 
         return (
             SourceProducts.map((item, i) => {
@@ -45,8 +41,6 @@ const ProductsContainer = () => {
                     <p>{item.title}</p>
             </div>
             }))
-        
-        
 }
 
 export default ProductsContainer
