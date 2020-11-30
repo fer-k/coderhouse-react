@@ -37,17 +37,15 @@ const ProductsContainer = () => {
             })        
         })
         
-        console.log(allProducts)
+        console.log(SourceProducts)
+
         return (
-        
-            allProducts.map((item, i) => {
-            
+            SourceProducts.map((item, i) => {
                 return <div key={item.id}>
-                <h3>{item.title}</h3>
-                <p>${item.price}</p>
-                </div>
+                    <p>{item.title}</p>
+            </div>
             }))
-            //<EachProduct/>
+        
         
 }
 
