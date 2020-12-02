@@ -4,6 +4,7 @@ import {useCartContext} from '../Context/CartContext'
 import { Link } from 'react-router-dom';
 
 
+
 const CartContainer = () => {
 
     const {cartList} = useCartContext();
@@ -21,6 +22,7 @@ const CartContainer = () => {
         <div>
             <h1>Tu pedido es</h1>
             {cartList.map(item => <CartItem {...item} />)}
+            <Link to={`/order`}><button>Confirmar pedido</button></Link>
         </div>
     )
 }

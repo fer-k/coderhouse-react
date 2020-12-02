@@ -5,7 +5,8 @@ import {useCartContext} from '../Context/CartContext'
 const getPromise = (data) => {
     return new Promise((res, rej) => {
             return res(data)
-        }, 1000)
+        })
+                
 }
 
 const EachProduct = ({ProductList}) => {

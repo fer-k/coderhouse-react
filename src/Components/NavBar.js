@@ -7,6 +7,7 @@ import About from '../Containers/About';
 import Contact from '../Containers/Contact';
 import ItemDetailContainer from '../Containers/ItemDetailContainer';
 import CartContainer from '../Containers/CartContainer';
+import OrderDetail from './OrderDetail';
 
 const NavBar = () => {
     return (
@@ -22,6 +23,7 @@ const NavBar = () => {
                 <Route path="/about" component={About}/>
                 <Route path="/contact" component={Contact}/>
                 <Route path="/cart" component={CartContainer}/>
+                <Route exact path="/order" component={OrderDetail}/>
                 <Route exact path="/:id" component={ItemDetailContainer}/>
             </Switch>
         </div> 
