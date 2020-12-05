@@ -6,7 +6,7 @@ const OrderDetail = () => {
     
     const newOrderTem = {
         cliente:{nombre:"Roberto", telefono:"123 456 7890", email:"rober@mail.com",},
-        items: [{id:"f1gEJ1wtA4msWjjc8Yoa"},{id:"uM01ATcCygo4R1CC1IZs"}],
+        items: [{id:"f1gEJ1wtA4msWjjc8Yoa"},{id:"uM01ATcCygo4R1CC1IZs"},{id:"f1gEJ1wtA4msWjjc8Yoa"},{id:"uM01ATcCygo4R1CC1IZs"}],
     }
 
     const newOrder = {...newOrderTem, total:newOrderTem.items.length,}
@@ -15,8 +15,8 @@ const OrderDetail = () => {
         const orders = DB.collection("orders");
         orders
             .add(newOrder)
-            .then(({id}) => {
-                console.log('se creó la orden bajo el id: ${id} pa')
+            .then(({ id }) => {
+                console.log(`se creó la orden bajo el id: ${id} pa`)
             }).catch((error) => {
                 console.log("Error buscando prods", error)
             }).finally(() => {
